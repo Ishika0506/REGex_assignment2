@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<HTML>
+	<HEAD>
+		<TITLE> Assignment2_01</TITLE>
+        <style>
+            #form-id{
+                text-align: left;
+            }
+            #submit-button{
+                text-align: center;
+            }
+        </style>
+        <script>
+            function myFunction() {
+                var text = document.getElementById("word").value;
+                var word = document.getElementById("input-word").value;
+                var rword = document.getElementById("replace-word").value;
+                document.getElementById("before-edit").innerHTML = "<b>Before Editing the Text:</b><br/> " + text;
+                var edit = text.replaceAll(word, rword);
+                document.getElementById("after-edit").innerHTML = "<b>After Editing the Text:</b><br/> " + edit;
+            }
+        </script>
+	</HEAD>
+	<BODY>
+        <h3> WAP to replace implement find and replace mechanism using JS </h3>
+        <form id="form-id"  method="POST" onsubmit="myFunction(); return false;">
+            <table>
+                <tr>
+                    <td> Enter the text for editing </td>
+                    <td>
+                        <input type="text" id="word">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Enter the word you want to replace:</td>
+                    <td>
+                        <input type="text" id="input-word">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Enter the word to be replaced:</td>
+                    <td>
+                        <input type="text" id="replace-word">
+                    </td>
+                </tr>
+                <tr>
+                    <td id="submit-button">
+                        <input type="submit">
+                    </td>
+                </tr>
+            </table>
+        </form>
+        <p id="before-edit"></p>
+        <p id="after-edit"></p>
+	</BODY>
+</HTML>
